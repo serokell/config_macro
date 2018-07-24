@@ -1,6 +1,6 @@
 with import <nixpkgs> {};
 
 stdenvNoCC.mkDerivation {
-  name = "configear";
+  name = "config_macro";
   buildInputs = [ elixir ];
 }
