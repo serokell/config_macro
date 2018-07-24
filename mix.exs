@@ -11,7 +11,7 @@ defmodule ConfigMacro.MixProject do
 	links: %{"GitLab" => "https://gitlab.com/serokell/config_macro"},
 	maintainers: ["Yegor Timoshenko"]
       ],
-      version: "1.0.0"
+      version: "0.1.0"
     ]
   end
 end
