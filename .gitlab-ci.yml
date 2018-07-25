@@ -3,7 +3,6 @@ image: nixos/nix
 before_script:
   - nix-channel --add https://nixos.org/channels/nixpkgs-unstable
   - nix-channel --update
-  - nix-shell --run 'mix do local.hex --force, deps.get'
 
 test:
   stage: test
