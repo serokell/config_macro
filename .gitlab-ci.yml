@@ -3,19 +3,22 @@ image: nixos/nix
 before_script:
   - nix-channel --add https://nixos.org/channels/nixpkgs-unstable
   - nix-channel --update
+  - nix-shell --pure
 
 deps:
   stage: build
-  script: nix-shell --run 'mix deps.get'
+  script:
+  - mix local.hex --force
+  - mix deps.get
 
 test:
   stage: test
-  script: nix-shell --run 'mix test'
+  script: mix test
 
 pages:
   stage: deploy
   script:
-  - nix-shell --run 'mix docs'
+  - mix docs
   - mv doc public
   artifacts:
     paths:
