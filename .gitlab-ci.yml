@@ -1,0 +1,24 @@
+image: nixos/nix
+
+before_script:
+  - nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+  - nix-channel --update
+
+deps:
+  stage: build
+  script: nix-shell --run 'mix deps.get'
+
+test:
+  stage: test
+  script: nix-shell --run 'mix test'
+
+pages:
+  stage: deploy
+  script:
+  - nix-shell --run 'mix docs'
+  - mv doc public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
