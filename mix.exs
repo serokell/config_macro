@@ -4,7 +4,8 @@ defmodule ConfigMacro.MixProject do
   def project do
     [
       app: :config_macro,
-      description: "Macro that defines Application.get_env/{2,3} getters",
+      deps: [{:ex_doc, "~> 0.18", only: :dev, runtime: false}],
+      description: "Macro that defines Mix.Config.config/3 compatible getters",
       package: [
         files: ["lib", "mix.exs"],
 	licenses: ["CC0-1.0"],
