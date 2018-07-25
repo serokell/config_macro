@@ -1,8 +1,9 @@
 defmodule ConfigMacroTest do
-  use ConfigMacro
-  use ExUnit.Case
-
+  import ConfigMacro
   config __MODULE__, dakkon: 1, morte: 2
+  config __MODULE__, [:annah]
+
+  use ExUnit.Case
 
   test "param returns default" do
     assert dakkon() == 1
@@ -13,7 +14,6 @@ defmodule ConfigMacroTest do
     assert morte() == 200
   end
 
-  config __MODULE__, [:annah]
 
   test "param w/o value returns nil" do
     assert annah() == nil
