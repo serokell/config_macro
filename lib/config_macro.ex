@@ -30,10 +30,6 @@ defmodule ConfigMacro do
   ```
   """
 
-  defmacro __using__([]) do
-    quote do: import unquote(__MODULE__)
-  end
-
   defp normalize_param({k, v}), do: {k, v}
   defp normalize_param(k) when is_atom(k), do: {k, nil}
 
