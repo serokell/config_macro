@@ -39,16 +39,16 @@ defmodule ConfigMacro do
   `app` is an atom with OTP application name.
 
   `params` is a list of atoms (for keys without default value) and/or
-  `{:key, "default_value"}` tuples.
+  `{:key, "default"}` tuples.
   """
   defmacro config(app, params) do
     for param <- params do
-      {key, value} = normalize_param(param)
+      {key, default} = normalize_param(param)
       quote do
         def unquote(key)() do
           unquote(app)
 	  |> Application.get_env(__MODULE__, [])
-	  |> Keyword.get(unquote(key), unquote(value))
+	  |> Keyword.get(unquote(key), unquote(default))
 	end
       end
     end
