@@ -1,7 +1,5 @@
 # ConfigMacro
 
-[![Release](https://img.shields.io/github/release/serokell/patak.svg)](https://github.com/serokell/patak/releases)
-
 ConfigMacro contains `config/2` macro that defines module-namespaced `Application.get_env/3` getters.
 Supposed to complement `Mix.Config.config/3` macro.
 
@@ -9,11 +7,11 @@ Supposed to complement `Mix.Config.config/3` macro.
 
 See usage documentation on [HexDocs](https://hexdocs.pm/config_macro/ConfigMacro.html).
 
-## For Contributors [↑](#-patak)
+## For Contributors [↑](#configmacro)
 
 Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
-## About Serokell [↑](#-patak)
+## About Serokell [↑](#configmacro)
 
 Patak is maintained and funded with :heart: by [Serokell](https://serokell.io/). The names and logo for Serokell are trademark of Serokell OÜ.
 
