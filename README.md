@@ -1,7 +1,7 @@
 # ConfigMacro
 
-ConfigMacro contains `config/2` macro that defines module-namespaced `Application.get_env/3` getters.
-Supposed to complement `Mix.Config.config/3` macro.
+ConfigMacro is a very simple tool to reduce the amount of `Application.get_env`s
+needed, making config uses more readable.
 
 # Documentation
 
