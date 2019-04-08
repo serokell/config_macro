@@ -47,9 +47,9 @@ defmodule ConfigMacro do
       quote do
         def unquote(key)() do
           unquote(app)
-	  |> Application.get_env(__MODULE__, [])
-	  |> Keyword.get(unquote(key), unquote(default))
-	end
+          |> Application.get_env(__MODULE__, [])
+          |> Keyword.get(unquote(key), unquote(default))
+        end
       end
     end
   end
